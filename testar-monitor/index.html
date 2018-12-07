@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <title>Impressão direto pelo navegador com API</title>
+    <meta name="description" content="Testing print list">
+    <meta name="author" content="Diego Rodrigo">
+
+    <!-- <link rel="stylesheet" href="css/styles.css?v=1.0"> -->
+
+</head>
+
+<body>
+    <div align="center">
+        <p><textarea rows="10" cols="80" id="barcode">
+D8
+N
+A265,5,0,1,1,1,N,"Etiqueta de teste  "
+A265,85,0,2,2,1,N,"1111111-222C "
+B265,25,0,1,2,2,50,N,"1111111-222C"
+A530,98,0,2,2,1,N,"C"
+A265,110,0,1,1,1,N,"Teste        "
+A265,128,0,1,1,1,N,"              "
+A580,40,1,3,1,1,N,"    AUTOTR"
+A270,140,0,2,1,1,N,"             "
+A435,140,0,2,1,1,N,"07/12/2018 "
+P01
+D8
+N
+		</textarea> </p>
+        <p><select id="listarImpressoras" onchange="changePrinter()" name="name">
+                <option>Não foi possível selecionar a impressora</option>
+            </select></p>
+        <p><input type="submit" name="button" id="imprimir" onclick="sendPrinter()" value="Imprimir" /></p>
+    </div>
+    <script src="jquery-3.3.1.min.js"></script>
+    <script type="text/JavaScript" src="./printZebra.js"></script>
+    <script>
+        loadJson()
+
+    </script>
+
+</body>
+
+</html>
